@@ -1,0 +1,41 @@
+<div *ngIf="display">
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Process</th>
+      <th>SKU-ID</th>
+      <th>Description</th>
+      <th>Equipment</th>
+      <th>Bar codes</th>
+    </tr>
+  </thead>
+  <tbody>
+  	
+  	<tr *ngFor="let equipment of equipments | paginate: { itemsPerPage: 1, currentPage: p }">
+  		<th scope="row">{{equipment.process}}</th>
+    	<td>{{equipment.sku}}</td>
+    	<td>{{equipment.description}}</td>
+    	<td>{{equipment.equipment}}</td>
+      	<td>{{equipment.barcodes}}</td>
+      		
+    </tr>
+    <!--
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+    -->
+  </tbody>
+</table>
+
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+</div>

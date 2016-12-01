@@ -1,0 +1,262 @@
+[
+   {
+      "id":1,
+      "description":"TDD Coating",
+      "eCheckSKUList":[
+         {
+            "id":1,
+            "SKU":"31-0022-7219-8",
+            "process_id":1,
+            "description":"Minitran 19 mg",
+            "allowedEquipmentList":[
+               {
+                  "id":1,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":1,
+                     "description":"Wildon Pump"
+                  },
+                  "bar_code":"15368"
+               },
+               {
+                  "id":2,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":1,
+                     "description":"Wildon Pump"
+                  },
+                  "bar_code":"15722"
+               },
+            {
+                  "id":4,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":2,
+                     "description":"Tubing"
+                  },
+                  "bar_code":"19443"
+               },
+            {
+                  "id":8,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":3,
+                     "description":"Beaker"
+                  },
+                  "bar_code":"27865"
+               },
+            {
+                  "id":10,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":4,
+                     "description":"Level Sensor"
+                  },
+                  "bar_code":"83254"
+               },
+            {
+                  "id":11,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":4,
+                     "description":"Level Sensor"
+                  },
+                  "bar_code":"96453"
+               },
+            {
+                  "id":12,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":4,
+                     "description":"Level Sensor"
+                  },
+                  "bar_code":"96454"
+               },
+            {
+                  "id":14,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":5,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"6458"
+               },
+            {
+                  "id":19,
+                  "echeck_sku_id":1,
+                  "equipmentType":{
+                     "id":6,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"46021"
+               }
+            ]
+         },
+         {
+            "id":2,
+            "SKU":"31-0022-7110-9",
+            "process_id":1,
+            "description":"Estradiol",
+         "allowedEquipmentList":[
+               {
+                  "id":3,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":1,
+                     "description":"Wildon Pump"
+                  },
+                  "bar_code":"15370"
+               },
+               {
+                  "id":5,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":2,
+                     "description":"Tubing"
+                  },
+                  "bar_code":"22984"
+               },
+            {
+                  "id":6,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":2,
+                     "description":"Tubing"
+                  },
+                  "bar_code":"23686"
+               },
+            {
+                  "id":7,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":2,
+                     "description":"Tubing"
+                  },
+                  "bar_code":"26658"
+               },
+            {
+                  "id":9,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":3,
+                     "description":"Beaker"
+                  },
+                  "bar_code":"26584"
+               },
+            {
+                  "id":13,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":4,
+                     "description":"Level Sensor"
+                  },
+                  "bar_code":"83544"
+               },
+            {
+                  "id":15,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":5,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"6450"
+               },
+            {
+                  "id":16,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":5,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"6451"
+               },
+            {
+                  "id":17,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":5,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"6452"
+               },
+            {
+                  "id":18,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":5,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"6453"
+               },
+            {
+                  "id":20,
+                  "echeck_sku_id":2,
+                  "equipmentType":{
+                     "id":6,
+                     "description":"Die Set"
+                  },
+                  "bar_code":"35602"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "id":2,
+      "description":"Process description2",
+      "eCheckSKUList":[
+         {
+            "id":101,
+            "SKU":"SKU Description 101",
+            "process_id":2,
+            "description":"eCheckSKU Desc 101",
+            "allowedEquipmentList":[
+               {
+                  "id":200,
+                  "echeck_sku_id":101,
+                  "equipmentType":{
+                     "id":400,
+                     "description":"equipmentType Desc 400"
+                  },
+                  "bar_code":"1700"
+               },
+               {
+                  "id":201,
+                  "echeck_sku_id":101,
+                  "equipmentType":{
+                     "id":500,
+                     "description":"equipmentType Desc 500"
+                  },
+                  "bar_code":"1609"
+               }
+            ]
+         },
+         {
+            "id":102,
+            "SKU":"SKU Description 102",
+            "process_id":2,
+            "description":"eCheckSKU Desc 102",
+          "allowedEquipmentList":[
+               {
+                  "id":203,
+                  "echeck_sku_id":102,
+                  "equipmentType":{
+                     "id":400,
+                     "description":"equipmentType Desc 400"
+                  },
+                  "bar_code":"1700"
+               },
+               {
+                  "id":204,
+                  "echeck_sku_id":101,
+                  "equipmentType":{
+                     "id":500,
+                     "description":"equipmentType Desc 500"
+                  },
+                  "bar_code":"1609"
+               }
+            ]
+         }
+      ]
+   }
+]
