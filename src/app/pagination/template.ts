@@ -10,49 +10,58 @@ export const DEFAULT_TEMPLATE = `
                          [id]="id"
                          [maxSize]="maxSize"
                          (pageChange)="pageChange.emit($event)">
-    <nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li class="page-item">
-      <a class="page-link" (click)="p.previous()" aria-label="First">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
 
-    <li class="page-item">
-      <a class="page-link" (click)="p.previous()" aria-label="Previous">
-        <span aria-hidden="true"> < </span>
-      </a>
-    </li>
+<div id="navcontainer">
+<ul id="ulNav">
+<li><a (click)="p.previous()"><<</a></li>
+<li><a (click)="p.previous()"><</a></li>
 
-    <div class="dropdown1">
+<li class="dropdown1">
     <select #select2 class="pageSizeSelect">
       <option *ngFor="let psize of pageSize" [value]="psize">{{psize}}</option>
     </select>
-    </div>
+</li>
 
-    <li class="page-item">
-      <a class="page-link" (click)="p.next()" aria-label="Next">
-        <span aria-hidden="true"> > </span>
-      </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link" (click)="p.next()" aria-label="Last">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+<li><a (click)="p.next()">></a></li>
+<li><a (click)="p.next()">>></a></li>
+</ul>
+</div>
     `;
 
 export const DEFAULT_STYLES = `
-  .pagination {
-    width: 100% !important;
-  }
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+text-align: center;
+}
 
-  .pageSizeSelect {
-    width: 22%;
-  }
+#navcontainer ul li { display: inline; }
+
+#navcontainer ul li a
+{
+text-decoration: none;
+padding: .2em 1em;
+color: #fff;
+background-color: #036;
+}
+
+#navcontainer ul li a:hover
+{
+color: #fff;
+background-color: #369;
+}
+
+#ulNav {
+float: left;
+width: 50%;
+margin-left: -10% !important;
+}
+.pageSizeSelect {
+  width: 20%;
+  height: 35px;
+}
 `;
 
 export const PAGE_SIZE = ['15', '25', '50', '100'];

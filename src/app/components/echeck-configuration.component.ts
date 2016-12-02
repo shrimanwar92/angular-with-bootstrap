@@ -7,7 +7,7 @@ import '../rxjs-operators';
 @Component({
   selector: 'display-view',
   templateUrl: './../templates/echeck-configuration.html',
-  //styleUrls: ['./countries.component.css'],
+  styleUrls: ['./../app.component.css'],
   providers: [ECheckConfigurationService]
   //pipes: [CountryFilterPipe]
   //pipes: [TwitterDateWithTimePipe]
