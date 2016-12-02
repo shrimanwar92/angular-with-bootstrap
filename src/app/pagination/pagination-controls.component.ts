@@ -8,6 +8,7 @@ import {DEFAULT_TEMPLATE, DEFAULT_STYLES, PAGE_SIZE} from './template';
     selector: 'pagination-controls',
     template: DEFAULT_TEMPLATE,
     styles: [DEFAULT_STYLES],
+    //providers: [SharedService],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PaginationControlsComponent {

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 import { Ng2PaginationModule } from './pagination/ng2-pagination';
+import { SharedService } from './services/shared.service';
 
 // custom component declaration
 import { AppComponent } from './app.component';
@@ -30,7 +31,7 @@ export const routes: Routes = [
     RouterModule.forRoot(routes),
     Ng2PaginationModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
