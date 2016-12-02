@@ -3,6 +3,7 @@ import {Subscription} from 'rxjs';
 
 import {PaginationService} from './pagination.service';
 import {PaginationInstance} from './pagination-instance';
+import { SharedService } from './../services/shared.service';
 
 export interface Page {
     label: string;
@@ -27,7 +28,8 @@ export class PaginationControlsDirective {
     private changeSub: Subscription;
 
     constructor(private service: PaginationService,
-                private changeDetectorRef: ChangeDetectorRef) {
+                private changeDetectorRef: ChangeDetectorRef,
+                private sharedService: SharedService) {
         this.changeSub = this.service.change
             .subscribe(id => {
                 if (this.id === id) {
@@ -65,6 +67,14 @@ export class PaginationControlsDirective {
      */
     next() {
         this.setCurrent(this.getCurrent() + 1);
+    }
+
+    first() {
+        this.setCurrent(1);
+    }
+
+    last() {
+        this.setCurrent(this.getLastPage());
     }
 
     /**
@@ -107,6 +117,12 @@ export class PaginationControlsDirective {
         }
         return Math.ceil(inst.totalItems / inst.itemsPerPage);
     }
+
+    onChange(val: string) {
+        this.sharedService.setItemsPerPage(val);
+    }
+
+    
 
     /**
      * Updates the page links and checks that the current page is valid. Should run whenever the

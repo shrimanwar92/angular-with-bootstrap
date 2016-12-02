@@ -10,7 +10,7 @@
   </thead>
   <tbody>
   	
-  	<tr *ngFor="let equipment of equipments | paginate: { itemsPerPage: 1, currentPage: p }">
+  	<tr *ngFor="let equipment of equipments | paginate: { itemsPerPage: pp, currentPage: p }">
   		<th scope="row">{{equipment.process}}</th>
     	<td>{{equipment.sku}}</td>
     	<td>{{equipment.description}}</td>
@@ -18,20 +18,6 @@
       	<td>{{equipment.barcodes}}</td>
       		
     </tr>
-    <!--
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    -->
   </tbody>
 </table>
 

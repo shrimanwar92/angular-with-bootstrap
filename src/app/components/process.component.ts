@@ -10,7 +10,7 @@ import { ProcessService } from './../services/process.service';
 })
 
 export class ProcessComponent implements OnInit {
-	errorMessage: string;
+	  errorMessage: string;
   	//tweets: Tweet[];
   	processes: any[];
   	mode = 'Observable';

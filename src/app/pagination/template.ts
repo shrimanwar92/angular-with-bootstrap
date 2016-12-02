@@ -13,17 +13,17 @@ export const DEFAULT_TEMPLATE = `
 
 <div id="navcontainer">
 <ul id="ulNav">
-<li><a (click)="p.previous()"><<</a></li>
+<li><a (click)="p.first()"><<</a></li>
 <li><a (click)="p.previous()"><</a></li>
 
 <li class="dropdown1">
-    <select #select2 class="pageSizeSelect">
+    <select #select2 class="pageSizeSelect" (change)="p.onChange(select2.value)">
       <option *ngFor="let psize of pageSize" [value]="psize">{{psize}}</option>
     </select>
 </li>
 
 <li><a (click)="p.next()">></a></li>
-<li><a (click)="p.next()">>></a></li>
+<li><a (click)="p.last()">>></a></li>
 </ul>
 </div>
     `;
