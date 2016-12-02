@@ -28,15 +28,15 @@
           
           <div class="row">
             
-          <display-view></display-view>
+          <router-outlet></router-outlet>
 
           </div><!--/row-->
         </div><!--/.col-xs-12.col-sm-9-->
 
         <div class="col-xs-6 col-sm-3 col-sm-pull-9 sidebar-offcanvas" id="sidebar">
           <div class="list-group">
-            <a href="#" (click)="activeMenu = 'echeck'" [ngClass]="{active : activeMenu === 'echeck'}" class="list-group-item">eCheck Configuration</a>
-            <a href="#" (click)="activeMenu = 'process'" [ngClass]="{active : activeMenu === 'process'}" class="list-group-item">Process</a>
+            <a [routerLink]="['configuration']" class="list-group-item">eCheck Configuration</a>
+            <a [routerLink]="['process']" class="list-group-item">Process</a>
             <a href="#" (click)="activeMenu='product-sku'" [ngClass]="{active: activeMenu === 'product-sku'}" class="list-group-item">Product SKU</a>
             <a href="#" (click)="activeMenu='eqtype'" [ngClass]="{active: activeMenu === 'eqtype'}" class="list-group-item">Equipment Type</a>
             <a href="#" (click)="activeMenu='equipment'" [ngClass]="{active: activeMenu === 'equipment'}" class="list-group-item">Equipment</a>
@@ -46,6 +46,7 @@
       </div><!--/row-->
 
       <hr>
+
 
       <footer>
         <!--<p>&copy; 2015 Company, Inc.</p>-->

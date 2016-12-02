@@ -19,8 +19,6 @@ export class ECheckConfigurationComponent implements OnInit {
   equipments: any[];
   mode = 'Observable';
   title: string;
-  display: boolean = false;
-  activeMenu: string;
 
   constructor(private eCheckService: ECheckConfigurationService) { }
 
@@ -28,7 +26,7 @@ export class ECheckConfigurationComponent implements OnInit {
     this.eCheckService.getAllEquipmentData()
       .subscribe(
          equipments => {
-           this.display = true;
+           console.log(equipments)
            this.equipments = equipments;
            
          },
