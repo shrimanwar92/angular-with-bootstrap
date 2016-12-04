@@ -60,6 +60,7 @@ export class PaginationControlsDirective {
      */
     previous() {
         this.setCurrent(this.getCurrent() - 1);
+        this.sharedService.setPage(this.getCurrent() - 1)
     }
 
     /**
@@ -67,14 +68,17 @@ export class PaginationControlsDirective {
      */
     next() {
         this.setCurrent(this.getCurrent() + 1);
+        this.sharedService.setPage(this.getCurrent() + 1)
     }
 
     first() {
         this.setCurrent(1);
+        this.sharedService.setPage(1)
     }
 
     last() {
         this.setCurrent(this.getLastPage());
+        this.sharedService.setPage(this.getLastPage());
     }
 
     /**

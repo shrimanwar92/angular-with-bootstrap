@@ -9,9 +9,9 @@ export class SharedService {
 
   itemsPerPage: string = PAGE_SIZES[0];
   public change: EventEmitter<string> = new EventEmitter<string>();
+  pageNumber: number;
 
   constructor (private http: Http) {
-
 
   }
 
@@ -22,6 +22,15 @@ export class SharedService {
 
   getItemsPerPage(): string {
     return this.itemsPerPage;
+  }
+
+  setPage(pageNumber: number) {
+    this.pageNumber = pageNumber;
+    alert(this.pageNumber)
+  }
+
+  getPage(): number {
+    return this.pageNumber;
   }
 
 }

@@ -13,8 +13,8 @@ export const DEFAULT_TEMPLATE = `
 
 <div id="navcontainer">
 <ul id="ulNav">
-<li><a (click)="p.first()"><<</a></li>
-<li><a (click)="p.previous()"><</a></li>
+<li><a [class.disabled]="p.isFirstPage()" (click)="p.first()"><<</a></li>
+<li><a [class.disabled]="p.isFirstPage()" (click)="p.previous()"><</a></li>
 
 <li class="dropdown1">
     <select #select2 class="pageSizeSelect" (change)="p.onChange(select2.value)">
@@ -22,8 +22,8 @@ export const DEFAULT_TEMPLATE = `
     </select>
 </li>
 
-<li><a (click)="p.next()">></a></li>
-<li><a (click)="p.last()">>></a></li>
+<li><a [class.disabled]="p.isLastPage()" (click)="p.next()">></a></li>
+<li><a [class.disabled]="p.isLastPage()" (click)="p.last()">>></a></li>
 </ul>
 </div>
     `;
@@ -62,6 +62,21 @@ margin-left: -10% !important;
   width: 20%;
   height: 35px;
 }
+
+.disabled {
+    color: #cacaca;
+    cursor: default; } 
+
+ .disabled:hover {
+      background: transparent; }
+
+ .disabled::before { 
+  display: inline-block;
+  margin-right: 0.5rem; }
+
+  .disabled::after {
+  display: inline-block;
+  margin-left: 0.5rem; }
 `;
 
 export const PAGE_SIZE = ['15', '25', '50', '100'];
