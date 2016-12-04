@@ -15,6 +15,7 @@ export class SharedService {
 
   }
 
+  // this page is getting set from pagination-controls.directive.ts
   setItemsPerPage(itemsPerPg: string) {
     this.itemsPerPage = itemsPerPg;
     this.change.emit(this.itemsPerPage);
@@ -24,6 +25,7 @@ export class SharedService {
     return this.itemsPerPage;
   }
 
+ // this page is getting set from pagination-controls.directive.ts
   setPage(pageNumber: number) {
     this.pageNumber = pageNumber;
     alert(this.pageNumber)
