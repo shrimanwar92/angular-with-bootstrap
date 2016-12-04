@@ -7,16 +7,9 @@
   </thead>
   <tbody>
   	
-    <tr>
-      <th>desc 1</th>
-    </tr>
-
-    <tr>
-      <th>desc 2</th>
-    </tr>
-
-    <tr>
-      <th>desc 3</th>
+    <tr *ngFor="let equipment of processes | paginate: { itemsPerPage: pp, currentPage: p }">
+      <th scope="row">{{equipment.process}}</th>
+          
     </tr>
     
   </tbody>

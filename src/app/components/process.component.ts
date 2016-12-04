@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ProcessService } from './../services/process.service';
+import { SharedService } from './../services/shared.service';
 
 @Component({
   selector: 'process-view',
@@ -14,9 +15,16 @@ export class ProcessComponent implements OnInit {
   	//tweets: Tweet[];
   	processes: any[];
   	mode = 'Observable';
+    pp: string = "";
+    changeSub: any;
 
-	constructor(private processService: ProcessService) { 
-
+	constructor(private processService: ProcessService, private sharedService: SharedService) { 
+    this.pp = this.sharedService.getItemsPerPage();
+    this.changeSub = this.sharedService.change
+            .subscribe(itemsPerPage => {
+                this.pp = itemsPerPage;
+                this.ngOnInit();
+            });    
 	}
 
 	ngOnInit() {
