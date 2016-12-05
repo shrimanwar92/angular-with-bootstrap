@@ -86,3 +86,8 @@ margin-left: -8% !important;
   height: 35px;
 }
 
+img.icons {
+  height: 20px !important;
+  padding-left: 20px;
+}
+

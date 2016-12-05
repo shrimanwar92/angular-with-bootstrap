@@ -5,7 +5,6 @@ import { SharedService } from './../services/shared.service';
 @Component({
   selector: 'process-view',
   templateUrl: './../templates/process.html',
-  //styleUrls: ['./countries.component.css'],
   providers: [ProcessService]
   //pipes: [TwitterDateWithTimePipe]
 })

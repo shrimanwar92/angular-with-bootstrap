@@ -8,7 +8,17 @@
   <tbody>
   	
     <tr *ngFor="let equipment of processes | paginate: { itemsPerPage: pp, currentPage: p }">
-      <th scope="row">{{equipment.process}}</th>
+      <td>{{equipment.process}}</td>
+      <td>
+
+      <a>
+        <img class="icons" src="assets/edit.png" alt="Edit" height=20>
+      </a>
+      <a>
+        <img class="icons" src="assets/delete.png" alt="Delete" height=20>
+      </a>
+
+      </td>
           
     </tr>
     
