@@ -5,6 +5,7 @@ import { SharedService } from './../services/shared.service';
 @Component({
   selector: 'process-view',
   templateUrl: './../templates/process.html',
+  styleUrls: ['./../app.component.css'],
   providers: [ProcessService]
   //pipes: [TwitterDateWithTimePipe]
 })
@@ -16,6 +17,7 @@ export class ProcessComponent implements OnInit {
   	mode = 'Observable';
     pp: string = "";
     changeSub: any;
+    title: string = "Process List";
 
 	constructor(private processService: ProcessService, private sharedService: SharedService) { 
     this.pp = this.sharedService.getItemsPerPage();

@@ -20,9 +20,9 @@ export class ECheckConfigurationComponent implements OnInit {
   errorMessage: string;
   equipments: any[];
   mode = 'Observable';
-  title: string;
   pp: string = "";
   changeSub: any;
+  title: string = "eCheck Configuration";
 
 
   constructor(private eCheckService: ECheckConfigurationService,

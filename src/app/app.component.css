@@ -91,3 +91,20 @@ img.icons {
   padding-left: 20px;
 }
 
+.page-heading {
+  margin-top: -8px;
+}
+
+.search-form {
+  margin: 0px !important;
+}
+
+#srch-term {
+  height: 34px;
+}
+
+.search-container {
+  margin-left: -44px !important;
+}
+
+
