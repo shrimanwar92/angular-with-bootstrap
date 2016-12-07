@@ -91,10 +91,6 @@ img.icons {
   padding-left: 20px;
 }
 
-.page-heading {
-  margin-top: -8px;
-}
-
 .search-form {
   margin: 0px !important;
 }
@@ -105,6 +101,10 @@ img.icons {
 
 .search-container {
   margin-left: -44px !important;
+}
+
+#add-process-btn {
+  float: right;
 }
 
 

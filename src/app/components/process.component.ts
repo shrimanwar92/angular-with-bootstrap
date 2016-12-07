@@ -1,12 +1,13 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { ProcessService } from './../services/process.service';
 import { SharedService } from './../services/shared.service';
+import {NgbModal, NgbActiveModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'process-view',
   templateUrl: './../templates/process.html',
   styleUrls: ['./../app.component.css'],
-  providers: [ProcessService]
+  providers: [ProcessService, NgbActiveModal]
   //pipes: [TwitterDateWithTimePipe]
 })
 
@@ -18,8 +19,11 @@ export class ProcessComponent implements OnInit {
     pp: string = "";
     changeSub: any;
     title: string = "Process List";
+    modalTitle: string = "Add Process";
+    closeResult: string;
+    modalRef: any;
 
-	constructor(private processService: ProcessService, private sharedService: SharedService) { 
+	constructor(private processService: ProcessService, private sharedService: SharedService, private modalService: NgbModal, activeModal: NgbActiveModal) { 
     this.pp = this.sharedService.getItemsPerPage();
     this.changeSub = this.sharedService.change
             .subscribe(itemsPerPage => {
@@ -40,4 +44,27 @@ export class ProcessComponent implements OnInit {
          }
       )
   }
+
+  open(content) {
+    /*this.modalService.open(content).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });*/
+    this.modalRef = this.modalService.open(content);
+  }
+
+  close() {
+    this.modalRef.close();
+  }
+
+  dismiss() {
+    this.modalRef.dismiss();
+  }
+
+  onSubmit(form: any, content): void {  
+    console.log('you submitted value:', form);
+    this.close();
+  }
+
 }
