@@ -24,7 +24,6 @@ export class ECheckConfigurationComponent implements OnInit {
   changeSub: any;
   title: string = "eCheck Configuration";
 
-
   constructor(private eCheckService: ECheckConfigurationService,
               private sharedService: SharedService) { 
 

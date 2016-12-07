@@ -12,7 +12,7 @@
       <div class="form-group">
         <label class="control-label col-sm-4" for="process">Process description:</label>
         <div class="col-sm-8">
-          <input type="text" name="processDescription" class="form-control" ngModel id="process" placeholder="Enter process description" required>
+          <input type="text" name="processDescription" class="form-control" ngModel id="process"  required>
         </div>
       </div>
       <div class="modal-footer">
@@ -30,6 +30,14 @@
 
 
 <h4 class="page-heading">{{title}}</h4>
+
+<div *ngIf="dataAddedSuccessfully">
+<div class="alert alert-success alert-dismissible" id="alert-success">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> Your process was saved successfully.
+</div>
+</div>
+
 <table class="table table-striped table-bordered">
   <thead>
     <tr>
@@ -42,14 +50,12 @@
     <tr *ngFor="let equipment of processes | paginate: { itemsPerPage: pp, currentPage: p }">
       <td>{{equipment.process}}</td>
       <td>
-
       <a title="Edit">
         <img class="icons" src="assets/edit.png" alt="Edit" height=20>
       </a>
-      <a title="Delete">
+      <a title="Delete" (click)="deleteProcess()">
         <img class="icons" src="assets/delete.png" alt="Delete" height=20>
       </a>
-
       </td>
           
     </tr>

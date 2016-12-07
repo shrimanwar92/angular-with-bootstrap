@@ -52,12 +52,6 @@ background-color: #036;
 color: #fff;
 background-color: #369;
 }
-
-#ulNav {
-float: left;
-width: 50%;
-margin-left: -10% !important;
-}
 .pageSizeSelect {
   width: 20%;
   height: 35px;

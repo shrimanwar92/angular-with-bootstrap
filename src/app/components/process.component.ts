@@ -20,7 +20,7 @@ export class ProcessComponent implements OnInit {
     changeSub: any;
     title: string = "Process List";
     modalTitle: string = "Add Process";
-    closeResult: string;
+    dataAddedSuccessfully: boolean = false;
     modalRef: any;
 
 	constructor(private processService: ProcessService, private sharedService: SharedService, private modalService: NgbModal, activeModal: NgbActiveModal) { 
@@ -65,6 +65,7 @@ export class ProcessComponent implements OnInit {
   onSubmit(form: any, content): void {  
     console.log('you submitted value:', form);
     this.close();
+    this.dataAddedSuccessfully = true;
   }
 
 }
