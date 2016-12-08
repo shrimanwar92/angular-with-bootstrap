@@ -83,4 +83,14 @@ export class ProcessComponent implements OnInit {
 
   }
 
+  deleteProcess() {
+    let c = confirm("Do you want to delete this process?");
+    if(c) {
+      // logic to actually delete the process goes here
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 }
